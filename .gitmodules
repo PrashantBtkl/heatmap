@@ -1,0 +1,6 @@
+[submodule "heatmap-ws"]
+	path = heatmap-ws
+	url = git@github.com:PrashantBtkl/heatmap-ws.git
+[submodule "heatmap-api"]
+	path = heatmap-api
+	url = git@github.com:PrashantBtkl/heatmap-api.git
