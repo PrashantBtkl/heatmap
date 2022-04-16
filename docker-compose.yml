@@ -1,0 +1,23 @@
+version: '3'
+services:
+  db:
+    image: "postgres:latest"
+    hostname: "db"
+    environment:
+      POSTGRES_PASSWORD: password
+  api:
+    image: "heatmap-api:latest"
+    hostname: "heatmap-api"
+    ports:
+      - '8000:5000'
+    env_file:
+      - env_file
+    depends_on:
+      - db
+  ws:
+    image: "heatmap-ws:latest"
+    hostname: "heatmap-ws"
+    ports:
+      - '8000:8765'
+    env_file:
+      - env_file
